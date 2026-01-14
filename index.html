@@ -1318,6 +1318,36 @@
         .promo-bar { font-size: 0.6rem; }
         body { word-wrap: break-word; }
     }
+	   .heritage-wrapper {
+            width: 100%;
+            max-width: 1100px; /* Limits width so it doesn't get too huge */
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15); /* Adds a nice floaty shadow */
+            background-color: #f9f9f9; /* Subtle backing in case image fails */
+            border: 1px solid #eee;
+            transition: transform 0.4s ease;
+        }
+
+        .heritage-wrapper:hover {
+            transform: translateY(-5px); /* Subtle lift effect on hover */
+        }
+
+        .heritage-img {
+            width: 100%;
+            height: auto;
+            display: block; /* Removes bottom gap */
+            object-fit: cover;
+        }
+
+        /* Mobile Adjustment */
+        @media (max-width: 768px) {
+            .heritage-wrapper {
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+        }
 </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -1464,6 +1494,25 @@
                     <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Advanced Surveying Technology Equipment" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+	<!-- Tradition/Heritage Feature Section -->
+    <section id="heritage" style="background-color: #fff; padding-bottom: 40px;">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Identity</h2>
+                <div class="line"></div>
+                <p style="margin-top: 15px; color: #666; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Blending Sri Lanka's rich engineering history with modern surveying precision.
+                </p>
+            </div>
+
+            <!-- The Image Container -->
+            <div class="heritage-wrapper" data-aos="zoom-in" data-aos-duration="1200">
+                <img src="q.png" alt="Vertex Innovators Heritage Art" class="heritage-img">
             </div>
         </div>
     </section>
